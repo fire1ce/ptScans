@@ -11,4 +11,4 @@ if [ $# -eq 0 ]
     exit 1 
 fi
 
-dirb ${URL} /usr/share/dirb/wordlists/big.txt -o ${DATE}.goBuster.${ShortURL}.log
+dirb ${URL} /usr/share/dirb/wordlists/big.txt -o ${DATE}.dirb.${ShortURL}.log
