@@ -1,0 +1,16 @@
+#!/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+DATE=`date +%Y%m%d`
+URL=$1
+
+if [ $# -eq 0 ]
+  then
+    echo "Provide a URL to Scan"
+    exit 1
+fi
+
+# nmap -n -sS -p 1-65535 -T4 -Pn -A -v -oX nmapUDP.xml --script ssl-enum-ciphers $URL &&
+nmap -n -Pn -sU --top-ports 100 -oX nmapUDP.xml --script ssl-enum-ciphers $URL &&
+xsltproc nmapUDP.xml -o ${DATE}.nmapUDP.${URL}.html && sleep 2 &&
+rm -rf nmapUDP.xml
