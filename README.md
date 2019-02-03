@@ -29,7 +29,7 @@ Run
 
 ```bash
 ln -s ${PWD}/nmapScan /usr/bin/nmapScan
-ln -s ${PWD}/nmapUdpScan /usr/bin/nmapUdpScan
+ln -s ${PWD}/nmapScanUDP /usr/bin/nmapScanUDP
 source ~/.zshrc
 ```
 
