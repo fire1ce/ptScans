@@ -6,9 +6,9 @@ URL=$1
 ShortURL=${URL#*//} #removes stuff upto // from begining
 
 if [ $# -eq 0 ]
-  then
+then
     echo "Provide a URL to Scan"
-    exit 1 
+    exit 1
 fi
 
-gobuster -fw -w /usr/share/dirb/wordlists/big.txt -u ${URL} -v -r -o ${DATE}.goBuster.${ShortURL}.log
+gobuster -w /usr/share/dirb/wordlists/big.txt -u ${URL} -v -r -o ${DATE}.goBuster.${ShortURL}.log
