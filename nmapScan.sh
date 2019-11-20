@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 export PATH=/opt/bin:/usr/local/bin:/usr/contrib/bin:/bin:/usr/bin:/usr/sbin:/usr/bin/X11
+cd $(dirname "$(realpath "$0")")
 
 DATE=`date +%y%m%d`
 URL=$1

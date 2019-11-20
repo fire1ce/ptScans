@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 export PATH=/opt/bin:/usr/local/bin:/usr/contrib/bin:/bin:/usr/bin:/usr/sbin:/usr/bin/X11
+cd $(dirname "$(realpath "$0")")
 
 DATE=`date +%y%m%d`
 URL=$1
@@ -11,4 +12,4 @@ then
     exit 1
 fi
 
-dirb ${URL} /usr/share/dirb/wordlists/big.txt -o ${DATE}.dirb.${ShortURL}.log
+dirb ${URL} /usr/share/dirb/wordlists/big.txt -o ./results/${DATE}.dirb.${ShortURL}.log
