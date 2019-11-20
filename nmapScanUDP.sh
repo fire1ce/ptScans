@@ -12,5 +12,4 @@ then
     exit 1
 fi
 
-nikto -Display V -o ${DATE}.Nikto.${ShortURL}.html -Format html -h ${URL}
-rm -rf nmapUDP.xml
+nikto -Display V -o ./results/${DATE}.Nikto.${ShortURL}.html -Format html -h ${URL}

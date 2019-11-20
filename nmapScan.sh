@@ -12,5 +12,5 @@ then
 fi
 
 nmap -n -sS -p 1-65535 -T4 -Pn -A -v -oX nmap.xml --script ssl-enum-ciphers $URL &&
-xsltproc nmap.xml -o ${DATE}.nmap.${URL}.html && sleep 2 &&
-rm -rf nmap.xml
+xsltproc ./results/nmap.xml -o ./results/${DATE}.nmap.${URL}.html && sleep 2 &&
+rm -rf ./results/nmap.xml

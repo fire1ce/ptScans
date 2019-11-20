@@ -12,4 +12,4 @@ then
     exit 1
 fi
 
-gobuster dir -w /usr/share/dirb/wordlists/big.txt -u ${URL} -v -r -o ${DATE}.goBuster.${ShortURL}.log
+gobuster dir -w /usr/share/dirb/wordlists/big.txt -u ${URL} -v -r -o ./results/${DATE}.goBuster.${ShortURL}.log
