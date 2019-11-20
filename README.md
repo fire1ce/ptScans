@@ -4,6 +4,10 @@ automation for pt scans like nikto, nmap, goBuster, dirb with output files for l
 
 ## Installation
 
+```bash
+ ln -s /root/shared/ptScanResults /root/tools/ptScans/results
+```
+
 cd to the ptScans directory
 Run
 
