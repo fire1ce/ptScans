@@ -4,6 +4,8 @@ cd $(dirname "$(realpath "$0")")
 
 DATE=`date +%y%m%d`
 URL=$1
+ShortURL=${URL#*//} #removes stuff upto // from begining
+
 
 if [ $# -eq 0 ]
 then
