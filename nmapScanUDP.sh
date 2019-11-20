@@ -1,11 +1,11 @@
-#!/bin/bash
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+#!/usr/bin/env bash
+export PATH=/opt/bin:/usr/local/bin:/usr/contrib/bin:/bin:/usr/bin:/usr/sbin:/usr/bin/X11
 
 DATE=`date +%y%m%d`
 URL=$1
 
 if [ $# -eq 0 ]
-  then
+then
     echo "Provide a URL to Scan"
     exit 1
 fi
