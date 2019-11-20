@@ -11,6 +11,4 @@ then
     exit 1
 fi
 
-nmap -n -sS -p 1-65535 -T4 -Pn -A -v -oX nmap.xml --script ssl-enum-ciphers $URL &&
-xsltproc ./results/nmap.xml -o ./results/${DATE}.nmap.${URL}.html && sleep 2 &&
-rm -rf ./results/nmap.xml
+nikto -Display V -o ./results/${DATE}.Nikto.${ShortURL}.html -Format html -h ${URL}
