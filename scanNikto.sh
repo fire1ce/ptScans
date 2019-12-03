@@ -4,8 +4,7 @@ cd $(dirname "$(realpath "$0")")
 
 DATE=`date +%y%m%d%I%M`
 URL=$1
-ShortURL=${URL#*//} #removes stuff upto // from begining
-UrlName = "${URL}" | sed -e 's|^[^/]*//||' -e 's|/.*$||' -e 's|:.*$||'
+DomainName=`echo "${URL}" | sed -e 's|^[^/]*//||' -e 's|/.*$||' -e 's|:.*$||'`
 
 
 if [ $# -eq 0 ]
@@ -14,4 +13,4 @@ then
     exit 1
 fi
 
-nikto -Display V -o ./results/${DATE}.Nikto.${UrlName}.html -Format html -h ${URL}
+nikto -Display V -o ./results/${DATE}.Nikto.${DomainName}.html -Format html -h ${URL}

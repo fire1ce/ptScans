@@ -5,4 +5,8 @@ DATE=`date +%y%m%d%I%M`
 
 echo ${DATE}
 URLName=`echo "${URL}" | sed -e 's|^[^/]*//||' -e 's|/.*$||' -e 's|:.*$||'`
+
+
 echo ${URLName}
+echo ${Protocol}
+echo ${DomainWithProtocol}

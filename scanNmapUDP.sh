@@ -4,8 +4,7 @@ cd $(dirname "$(realpath "$0")")
 
 DATE=`date +%y%m%d%I%M`
 URL=$1
-ShortURL=${URL#*//} #removes stuff upto // from begining
-UrlName = "${URL#*//}" | sed -e 's|^[^/]*//||' -e 's|/.*$||' -e 's|:.*$||'
+DomainName=`echo "${URL}" | sed -e 's|^[^/]*//||' -e 's|/.*$||' -e 's|:.*$||'`
 
 
 if [ $# -eq 0 ]
@@ -14,11 +13,8 @@ then
     exit 1
 fi
 
-
-
-nmap -sU -sV -p 1-65535 -T4 -oX ./results/${DATE}.nmap.${UrlName}.xml --script ssl-enum-ciphers $UrlName &&
-xsltproc ./results/${DATE}.nmap.${UrlName}.xml -o ./results/${DATE}.nmap.${UrlName}.html && sleep 2 &&
-rm -rf ./results/${DATE}.nmap.${UrlName}xml
-
+nmap -sU -sV -p 1-65535 -T4 -oX ./results/${DATE}.nmap.${DomainName}.xml --script ssl-enum-ciphers ${DomainName} &&
+xsltproc ./results/${DATE}.nmap.${DomainName}.xml -o ./results/${DATE}.nmap.${DomainName}.html && sleep 2 &&
+rm -rf ./results/${DATE}.nmap.${DomainName}.xml
 
 
