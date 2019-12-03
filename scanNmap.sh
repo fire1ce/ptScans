@@ -2,9 +2,9 @@
 export PATH=/opt/bin:/usr/local/bin:/usr/contrib/bin:/bin:/usr/bin:/usr/sbin:/usr/bin/X11
 cd $(dirname "$(realpath "$0")")
 DATE=`date +%y%m%d%I%M`
+URL=$1
 URLName=`echo "${URL}" | sed -e 's|^[^/]*//||' -e 's|/.*$||' -e 's|:.*$||'`
 
-URL=$1
 if [ $# -eq 0 ]
 then
     echo "Provide a URL to Scan"
