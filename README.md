@@ -9,6 +9,8 @@ automation for pt scans like nikto, nmap, goBuster, dirb with output files for l
 ```
 
 cd to the ptScans directory
+mkdir results
+or add alias for results folder
 Run
 
 ```bash
