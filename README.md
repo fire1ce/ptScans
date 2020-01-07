@@ -12,10 +12,10 @@ cd to the ptScans directory
 Run
 
 ```bash
-ln -s ${PWD}/scanGobuster.sh /usr/bin/scanGobuster
-ln -s ${PWD}/scanNikto.sh /usr/bin/scanNikto
-ln -s ${PWD}/scanNmap.sh /usr/bin/scanNmap
-ln -s ${PWD}/scanNmapUDP.sh /usr/bin/scanNmapUDP
-ln -s ${PWD}/scanDirb.sh /usr/bin/scanDirb
+ln -s ${PWD}/gobusterScan.sh /usr/bin/gobusterScan
+ln -s ${PWD}/niktoScan.sh /usr/bin/niktoScan
+ln -s ${PWD}/nmapScan.sh /usr/bin/nmapScan
+ln -s ${PWD}/nmapUDPScan.sh /usr/bin/nmapUDPScan
+ln -s ${PWD}/dirbScan.sh /usr/bin/dirbScan
 source ~/.zshrc
 ```
