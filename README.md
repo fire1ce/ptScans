@@ -19,5 +19,6 @@ ln -s ${PWD}/niktoScan.sh /usr/bin/niktoScan
 ln -s ${PWD}/nmapScan.sh /usr/bin/nmapScan
 ln -s ${PWD}/nmapUDPScan.sh /usr/bin/nmapUDPScan
 ln -s ${PWD}/dirbScan.sh /usr/bin/dirbScan
+ln -s ${PWD}/wpScan.sh /usr/bin/wpScan
 source ~/.zshrc
 ```
