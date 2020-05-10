@@ -11,4 +11,4 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-wpscan --url ${URL} --api-token KaU9rJkQZoohCzo3FzVFTENmJ7j3kEzTQd0NKbW17WA -o ./results/${DATE}.wpscan.${DomainName}.txt
+wpscan --url ${URL} --api-token KaU9rJkQZoohCzo3FzVFTENmJ7j3kEzTQd0NKbW17WA -v -o ./results/${DATE}.wpscan.${DomainName}.txt
