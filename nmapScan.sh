@@ -11,5 +11,5 @@ if [ $# -eq 0 ]; then
 fi
 
 nmap -n -sS -p 1-65535 -T4 -Pn -A -v -oX ./results/${DATE}.nmap.${DomainName}.xml --script ssl-enum-ciphers ${DomainName} &&
-    xsltproc ./results/*.nmap.${DomainName}.xml -o ./results/${DATE}.nmap.${DomainName}.html && sleep 2 &&
+    xsltproc ./results/${DATE}.nmap.${DomainName}.xml -o ./results/${DATE}.nmap.${DomainName}.html && sleep 2 &&
     rm -rf ./results/${DATE}.nmap.${DomainName}.xml
